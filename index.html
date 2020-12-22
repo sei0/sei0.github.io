@@ -9,6 +9,7 @@
         color: #282828;
         text-align: center;
         margin: auto;
+
       }
 
       #contents {
@@ -63,24 +64,30 @@
       }
 
       .cards {
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin-bottom: 40px;
       }
 
       .card {
-        display: inline-block;
-        width: 300px;
-        margin: 15px 0;
+        /*display: inline-block;*/
+
+        width: 270px;
         text-align: left;
         transition: 0.3s;
+        margin:10px;
       }
 
       .card:hover {
-        border-radius: 10px;
+        border-radius: 8px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        width: 280px;
       }
 
       .card img {
-        border-radius: 10px;
+        border-radius: 8px;
         width: 100%;
       }
 
@@ -95,22 +102,27 @@
       }
 
       .samples {
-        margin : 60px 0;
-        text-align: center;
+        /*margin : 60px 0;
+        text-align: center;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
       }
 
       .sample {
         /* Add shadows to create the "card" effect */
         border-radius: 10px;
         width: 300px;
-        margin: 15px 0;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        margin: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05);
         transition: 0.3s;
       }
 
         /* On mouse-over, add a deeper shadow */
       .sample:hover {
-          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+          width: 320px;
       }
 
         /* Add some padding inside the card container */
@@ -128,40 +140,22 @@
       }
 
       .footer {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 320px;
-        background-color: #282828;
-        padding-top: 40px;
-        padding-left: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%-80px;
+        height: 220px;
+        background-color: #111111;
+        padding: 40px;
         color: white;
         text-align: left;
       }
 
       p {
-        font-size: 14px;
+        font-size: 15px;
       }
-
-      @media only screen and (min-width: 550px) {
-        .cards {
-          text-align: left;
-        }
-
-        .card {
-           width: calc((100% - 30px) / 2);
-           /* margin-left: 10px; */
-        }
-
-        .card:nth-child(even) {
-          margin-left: 20px;
-        }
-
-        .card:nth-child(odd){
-          text-align: center;
-        }
-
-        .samples {
+      .samples {
           text-align: left;
         }
 
@@ -169,18 +163,8 @@
           text-align: center;
         }
 
-        .sample {
-           width: calc((100% - 30px) / 2);
-           /* margin-left: 10px; */
-        }
 
-        .sample:nth-child(even) {
-          margin-left: 20px;
-        }
 
-        .sample:nth-child(odd){
-          text-align: center;
-        }
       }
 
     </style>
